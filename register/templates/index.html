@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'register.css' %}">
+    <script type="text/javascript" src="{% static 'register.js' %}"></script>
+</head>
+<body>
+    <div class="user">
+    <header class="user__header">
+        <svg-icon><src href="sprite.svg#si-glyph-code" /></svg-icon>
+        <i class="fas fa-code" style="color: white;"></i>
+        <!--<img src="{% static 'images/code1.png' %}" style="color: white;">-->
+        <h1 class="user__title">Register for Kodeathon</h1>
+    </header>
+
+    <form class="form" action="\registered" method="post">
+        {% csrf_token %}
+        <div class="form__group">
+            <input type="text" placeholder="Your name" class="form__input" name='Name' required />
+        </div>
+
+        <div class="form__group">
+            <input type="email" placeholder="Your Email" class="form__input" required name='email' />
+        </div>
+
+        <div class="form__group">
+            <input type="text" placeholder="Team name" class="form__input" required name='teamname' />
+        </div>
+
+        <div class="form__group">
+            <input type="text" placeholder="Member-1-name(Er. no)" class="form__input" required" name='mem1' />
+        </div>
+        <div class="form__group">
+            <input type="text" placeholder="Member-2-name(Er. no)" class="form__input" name='mem2' />
+        </div>
+
+        <div class="form__group">
+            <input type="text" placeholder="Member-3-name(Er. no)" class="form__input" name='mem3' />
+        </div>
+
+        <button class="btn" type="Submit">Register</button>
+    </form>
+    </div>
+</body>
+</html>
