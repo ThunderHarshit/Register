@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'Harshitshivani0@gmail.com'
-EMAIL_HOST_PASSWORD = '9621860103'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
 
 SENDSMS_BACKEND = 'register.views.SmsBackend'
